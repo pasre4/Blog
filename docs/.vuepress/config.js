@@ -21,6 +21,12 @@ module.exports = {
                 dirname: 'study',
                 path: '/study/',
                 itemPermalink: '/study/:slug'
+            },
+            {
+                id: 'operation',
+                dirname: 'operation',
+                path: '/考研/操作系统/',
+                itemPermalink: '/考研/操作系统/:slug'
             }
         ],
         footer: {
