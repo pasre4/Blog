@@ -3,9 +3,10 @@ module.exports = {
     theme: '@vuepress/blog',
     themeConfig: {
         nav: [
-            { text: '进修', link: '/study/' },
+            { text: '考研', link: '/考研/' },
             { text: 'Blog', link: '/' },
-            { text: '标签', link: '/tag/' },
+            { text: '标签', link: '/tags/' },
+            { text: '分类', link: '/category/' },
             { text: 'Git', link: 'http://git.pasre.cn/' },
 
         ],
@@ -18,15 +19,49 @@ module.exports = {
             },
             {
                 id: 'study',
-                dirname: 'study',
-                path: '/study/',
-                itemPermalink: '/study/:slug'
+                dirname: 'study/main',
+                path: '/考研/',
+                itemPermalink: '/考研/:slug'
             },
             {
                 id: 'operation',
-                dirname: 'operation',
+                dirname: 'study/operation',
                 path: '/考研/操作系统/',
                 itemPermalink: '/考研/操作系统/:slug'
+            },
+            {
+                id: 'network',
+                dirname: 'study/network',
+                path: '/考研/网络/',
+                itemPermalink: '/考研/网络/:slug'
+            },
+            {
+                id: 'csharp',
+                dirname: 'csharp/main',
+                path: '/csharp/',
+                itemPermalink: '/csharp/:slug'
+            },
+            {
+                id: 'csharp_version',
+                dirname: 'csharp/version',
+                path: '/csharp/version',
+                itemPermalink: '/csharp/version/:slug'
+            }
+        ],
+        frontmatters: [
+            {
+                id: 'tag',
+                keys: ['tag','tags'],
+                path: '/tags/',
+                layout: 'Tags',
+                scopeLayout: 'Tag'
+            },
+            {
+                id: 'category',
+                keys: ['category'],
+                path: '/category/',
+                layout: 'Tags',
+                scopeLayout: 'Tag'
             }
         ],
         footer: {
